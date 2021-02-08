@@ -1,6 +1,6 @@
 {
     "name": "jekyll",
-    "image":"jekyll/builder:pages",
+    "image":"jekyll/builder",
     "appPort":[
         4000
     ]
