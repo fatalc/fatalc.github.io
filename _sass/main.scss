@@ -1,1 +1,74 @@
 @charset "utf-8";
+
+// theme seting
+@import 'theme';
+
+// style setting
+$header-height:64px;
+$header-imgsize: 40px;
+$font-famliy:"Roboto", "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Naskh Arabic", "Noto Sans Thai", "Noto Sans Hebrew", "Noto Sans Bengali", sans-serif;
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin shadow {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+body{
+    margin: 0;
+    background-color: $theme-backgroud;
+}
+
+
+
+    .header{
+        padding: 0 16px 0 24px;
+        @include flex;
+        * {
+            @include flex;
+        }
+        height: $header-height;
+        background-color: $theme-primary;
+        flex-flow: row nowrap;
+       @include shadow;
+    
+        .header-img {
+            padding: 0 10px;
+            img{
+                width: $header-imgsize;
+                height: $header-imgsize;
+            }
+            justify-self: flex-start;
+        }
+    
+        .header-nav{
+            @include flex;
+            flex-grow: 1;
+            flex-flow: row wrap;
+            align-self: flex-end;
+            place-content: end center;
+            left: -300px;
+    tab{
+        &:hover{
+          text-decoration: underline solid $theme-text;
+        }
+        a {
+            padding: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: $theme-text-primary;
+            font-family: $font-famliy;
+        }
+    }  
+    }
+}
+
+
+
+
+

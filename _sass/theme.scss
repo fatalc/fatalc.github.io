@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+// custom
+$theme-primary: white;
+$theme-secondary: #4caf50;
+
+// main color
+$theme-primary: #6200ee !default;
+$theme-primary-variant: variant-color($theme-primary) !default;
+$theme-on-primary: if(contrast-tone($theme-primary) == 'dark', #000, #fff) !default;
+$theme-secondary: #03dac6 !default;
+$theme-secondary-variant: variant-color($theme-secondary) !default;
+$theme-on-secondary: if(contrast-tone($theme-secondary) == 'dark', #000, #fff) !default;
+$theme-backgroud: #ffffff !default;
+$theme-on-backgroud: if(contrast-tone($theme-backgroud) == 'dark', #fff, #000) !default;
+$theme-surface: #018786 !default;
+$theme-on-surface: if(contrast-tone($theme-surface) == 'dark', #000, #fff) !default;
+$theme-error: #b00020 !default;
+$theme-on-error: if(contrast-tone($theme-error) == 'dark', #000, #fff) !default;
+$theme-font: #b00020 !default;
+$theme-on-font: #000 !default;
+
+// text color
+$theme-text: if(contrast-tone($theme-primary) == 'dark', #fff, #000) !default;
+$theme-text-primary: rgba($theme-text, 0.87);
+$theme-text-secondary: rgba($theme-text, 0.54);
+$theme-text-hint: rgba($theme-text, 0.38);
+$theme-text-disabled: rgba($theme-text, 0.38);
+$theme-text-icon: rgba($theme-text, 0.38);
+
+// if a color is 'dark' or 'light'
+@function contrast-tone($color) {
+  @return return 'light';
+}
+
+// variant clolor
+@function variant-color($color) {
+  @return $color
+}
+
